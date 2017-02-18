@@ -10,7 +10,11 @@
 
 指向函数的指针。例子：double (*func)(int a, float b)
 
-函数指针作参数：void Fun ( double( paramFunc)(int a, float b), float param2 ){…}1.2 函数指针作为返回值：double (Fun(float a, float b)) (int a, float b){  return fu">
+函数指针作参数：
+12void Fun ( double(* paramFunc)(int a, float b), float param2 )&amp;#123;...&amp;#125;
+
+函数指针作为返回值：
+1234double (*Fun(float a, float b)) (int a,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="function">
 <meta property="og:url" content="http://yoursite.com/2017/02/18/function/index.html">
@@ -20,8 +24,12 @@
 
 指向函数的指针。例子：double (*func)(int a, float b)
 
-函数指针作参数：void Fun ( double( paramFunc)(int a, float b), float param2 ){…}1.2 函数指针作为返回值：double (Fun(float a, float b)) (int a, float b){  return fu">
-<meta property="og:updated_time" content="2017-02-18T03:19:44.588Z">
+函数指针作参数：
+12void Fun ( double(* paramFunc)(int a, float b), float param2 )&amp;#123;...&amp;#125;
+
+函数指针作为返回值：
+1234double (*Fun(float a, float b)) (int a,">
+<meta property="og:updated_time" content="2017-02-18T03:29:33.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="function">
 <meta name="twitter:description" content="函数对象
@@ -29,7 +37,11 @@
 
 指向函数的指针。例子：double (*func)(int a, float b)
 
-函数指针作参数：void Fun ( double( paramFunc)(int a, float b), float param2 ){…}1.2 函数指针作为返回值：double (Fun(float a, float b)) (int a, float b){  return fu">
+函数指针作参数：
+12void Fun ( double(* paramFunc)(int a, float b), float param2 )&amp;#123;...&amp;#125;
+
+函数指针作为返回值：
+1234double (*Fun(float a, float b)) (int a,">
   
     <link rel="alternate" href="/atom.xml" title="Richy&#39;s HomePage" type="application/atom+xml">
   
@@ -67,9 +79,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -109,7 +121,12 @@
 </ul>
 <p>指向函数的指针。<br>例子：double (*func)(int a, float b)</p>
 <ul>
-<li>函数指针作参数：<br>void Fun ( double(<em> paramFunc)(int a, float b), float param2 )<br>{…}<br>1.2 函数指针作为返回值：<br>double (</em>Fun(float a, float b)) (int a, float b)<br>{<br>  return func;<br>}</li>
+<li><p>函数指针作参数：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">void Fun ( double(* paramFunc)(int a, float b), float param2 )</div><div class="line">&#123;...&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数指针作为返回值：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> (*Fun(<span class="keyword">float</span> a, <span class="keyword">float</span> b)) (<span class="keyword">int</span> a, <span class="keyword">float</span> b)</div><div class="line">&#123;</div><div class="line">     <span class="keyword">return</span> func;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <ul>
 <li><strong>函数对象</strong><ul>
@@ -119,13 +136,15 @@
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Func</div><div class="line">&#123;</div><div class="line">   	<span class="keyword">private</span>:</div><div class="line">   	<span class="keyword">int</span> a;</div><div class="line"></div><div class="line">   	<span class="keyword">public</span>:</div><div class="line">   	Func(<span class="keyword">int</span> a): a(a)</div><div class="line">   	&#123;&#125;</div><div class="line"></div><div class="line">   	<span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">int</span> b)</span> </span>&#123;<span class="keyword">return</span> a + b;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li><strong>lambda表达式</strong><br>[…] (…) {…}<br>auto Func = [&amp;, b] (int param) -&gt; double {return param + a + b;}<br>以上三者都是可调用类型(callable type)，可统一用std::function来表示<br>c++11提供多种包装器，bind, function, mem_fn, reference_wrapper。</li>
+<li><strong>lambda表达式</strong><br>[…] (…) {…}<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">auto</span> Func = [&amp;, b] (<span class="keyword">int</span> param) -&gt; <span class="keyword">double</span> &#123;<span class="keyword">return</span> param + a + b;&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>以上三者都是可调用类型(callable type)，可统一用std::function来表示<br>c++11提供多种包装器，bind, function, mem_fn, reference_wrapper。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/18/function/" data-id="cizanbcdo0001d0lxi07dc458" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/02/18/function/" data-id="cizanbcdo0001d0lxi07dc458" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +155,7 @@
   
   
     <a href="/2017/02/17/first-post/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">first post</div>
     </a>
   
@@ -151,7 +170,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c-primer/">c++ primer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dayly/">dayly</a></li></ul>
     </div>
@@ -176,7 +195,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -201,7 +220,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
