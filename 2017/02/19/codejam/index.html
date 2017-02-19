@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Richy&#39;s HomePage</title>
+  <title>codejam2017 | Richy&#39;s HomePage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Richy's HomePage">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Problem A哈希计数，字符串比较注意：字符串比较应把空格trim掉后再比。
+Problem B问题等价于：m个+1和n个-1组成数列（m &amp;gt; n），求部分和为正数的概率。这是个卡特兰数变形问题。所有可能数列共C(n, m+n)种情况。现考虑不符合条件的情况。对于不符合条件的数列，设其最早在第i位部分和为-1，对0~i位取反得到映射数列，这个数列有m+1个+1和n-1个-1.而对于任意一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="codejam2017">
+<meta property="og:url" content="http://yoursite.com/2017/02/19/codejam/index.html">
 <meta property="og:site_name" content="Richy's HomePage">
+<meta property="og:description" content="Problem A哈希计数，字符串比较注意：字符串比较应把空格trim掉后再比。
+Problem B问题等价于：m个+1和n个-1组成数列（m &amp;gt; n），求部分和为正数的概率。这是个卡特兰数变形问题。所有可能数列共C(n, m+n)种情况。现考虑不符合条件的情况。对于不符合条件的数列，设其最早在第i位部分和为-1，对0~i位取反得到映射数列，这个数列有m+1个+1和n-1个-1.而对于任意一">
+<meta property="og:updated_time" content="2017-02-19T11:34:04.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Richy's HomePage">
+<meta name="twitter:title" content="codejam2017">
+<meta name="twitter:description" content="Problem A哈希计数，字符串比较注意：字符串比较应把空格trim掉后再比。
+Problem B问题等价于：m个+1和n个-1组成数列（m &amp;gt; n），求部分和为正数的概率。这是个卡特兰数变形问题。所有可能数列共C(n, m+n)种情况。现考虑不符合条件的情况。对于不符合条件的数列，设其最早在第i位部分和为-1，对0~i位取反得到映射数列，这个数列有m+1个+1和n-1个-1.而对于任意一">
   
     <link rel="alternate" href="/atom.xml" title="Richy&#39;s HomePage" type="application/atom+xml">
   
@@ -59,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-codejam" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-codejam" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/19/codejam/" class="article-date">
   <time datetime="2017-02-19T10:48:16.000Z" itemprop="datePublished">2017-02-19</time>
@@ -78,8 +83,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/codejam/">codejam2017</a>
+    <h1 class="article-title" itemprop="name">
+      codejam2017
     </h1>
   
 
@@ -104,120 +109,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-function" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/18/function/" class="article-date">
-  <time datetime="2017-02-18T02:45:20.000Z" itemprop="datePublished">2017-02-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-primer/">c++ primer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/18/function/">function</a>
-    </h1>
+    <a href="/2017/02/18/function/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">function</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h3><ul>
-<li><strong>函数指针：</strong></li>
-</ul>
-<p>指向函数的指针。<br>例子：double (*func)(int a, float b)</p>
-<ul>
-<li><p>函数指针作参数：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">void Fun ( double(* paramFunc)(int a, float b), float param2 )</div><div class="line">&#123;...&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数指针作为返回值：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> (*Fun(<span class="keyword">float</span> a, <span class="keyword">float</span> b)) (<span class="keyword">int</span> a, <span class="keyword">float</span> b)</div><div class="line">&#123;</div><div class="line">     <span class="keyword">return</span> func;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><strong>函数对象</strong><ul>
-<li>重载()运算符</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Func</div><div class="line">&#123;</div><div class="line">   	<span class="keyword">private</span>:</div><div class="line">   	<span class="keyword">int</span> a;</div><div class="line"></div><div class="line">   	<span class="keyword">public</span>:</div><div class="line">   	Func(<span class="keyword">int</span> a): a(a)</div><div class="line">   	&#123;&#125;</div><div class="line"></div><div class="line">   	<span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">int</span> b)</span> </span>&#123;<span class="keyword">return</span> a + b;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>lambda表达式</strong><br>[…] (…) {…}<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">auto</span> Func = [&amp;, b] (<span class="keyword">int</span> param) -&gt; <span class="keyword">double</span> &#123;<span class="keyword">return</span> param + a + b;&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以上三者都是可调用类型(callable type)，可统一用std::function来表示<br>c++11提供多种包装器，bind, function, mem_fn, reference_wrapper。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/18/function/" data-id="cizcljsw60003y0lxxzx3weoe" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-first-post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/17/first-post/" class="article-date">
-  <time datetime="2017-02-17T09:18:22.000Z" itemprop="datePublished">2017-02-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/dayly/">dayly</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/first-post/">first post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><p>My name is Richy Leong, a graduate student mayjoring in CS in ZJU CAD&amp;CG state key lab.</p>
-<h2 id="Hobby"><a href="#Hobby" class="headerlink" title="Hobby :"></a>Hobby :</h2><ul>
-<li>video games</li>
-<li>movie</li>
-<li>reading</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/17/first-post/" data-id="cizcljsw10001y0lxjd64ok3a" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
